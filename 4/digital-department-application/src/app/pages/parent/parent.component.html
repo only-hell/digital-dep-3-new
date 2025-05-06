@@ -1,0 +1,10 @@
+<app-reactive-form (dataSaved)="onDataSaved($event)"></app-reactive-form>
+
+<div *ngIf="savedData.length">
+  <h3>Saved Data:</h3>
+  <ul>
+    <li *ngFor="let item of savedData">
+      Name: {{ item.name }}, Age: {{ item.age }}
+    </li>
+  </ul>
+</div>
