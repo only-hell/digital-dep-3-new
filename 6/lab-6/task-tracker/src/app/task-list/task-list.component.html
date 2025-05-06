@@ -1,0 +1,8 @@
+<div *ngFor="let task of taskService.getTasks()">
+  <h3>{{ task.title }} ({{ task.type }})</h3>
+  <p><strong>Priority:</strong> {{ task.priority }} | <strong>Status:</strong> {{ task.status }}</p>
+  <p><strong>Created:</strong> {{ task.createdAt | date:'short' }} | <strong>Updated:</strong> {{ task.updatedAt | date:'short' }}</p>
+  <p><strong>Assignee:</strong> {{ task.assignee }} | <strong>Creator:</strong> {{ task.creator }}</p>
+  <p>{{ task.description }}</p>
+  <hr>
+</div>
